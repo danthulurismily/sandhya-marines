@@ -36,9 +36,11 @@ export function Footer() {
         <div className="mt-24 grid gap-10 border-t border-primary-foreground/15 pt-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
-              <span className="grid h-10 w-10 place-items-center rounded-full bg-primary-foreground/10 font-display text-lg">
-                S
-              </span>
+              <img
+                src="/sandhya-logo.webp"
+                alt="Sandhya Marines"
+                className="h-17 w-17 md object-contain "
+              />
               <span className="font-display text-xl">Sandhya Marines</span>
             </div>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-primary-foreground/70">

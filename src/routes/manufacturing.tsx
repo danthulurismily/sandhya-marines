@@ -26,12 +26,12 @@ export const Route = createFileRoute("/manufacturing")({
 });
 
 const steps = [
-  { n: "01", t: "Raw material selection", d: "Marine proteins, cereals, and micro-ingredients sourced under strict qualification protocols and verified on arrival." },
-  { n: "02", t: "Research & formulation", d: "Nutritionists translate species biology into precise recipes, validated in trial ponds before production." },
-  { n: "03", t: "Precision production", d: "Continuous extrusion at our 66,000 MT facility with real-time particle and moisture control." },
-  { n: "04", t: "Quality testing", d: "Every batch tested for nutrition, microbial load, and pellet stability — nothing ships without a passport." },
-  { n: "05", t: "Packaging", d: "Moisture-barrier packaging engineered for tropical storage and long-distance logistics." },
-  { n: "06", t: "Global distribution", d: "A cold-chain-ready network delivering across South Asia, South-East Asia, and the Middle East." },
+  { id: "raw-material-selection", n: "01", t: "Raw material selection", d: "Marine proteins, cereals, and micro-ingredients sourced under strict qualification protocols and verified on arrival." },
+  { id: "research", n: "02", t: "Research & formulation", d: "Nutritionists translate species biology into precise recipes, validated in trial ponds before production." },
+  { id: "production", n: "03", t: "Precision production", d: "Continuous extrusion at our 66,000 MT facility with real-time particle and moisture control." },
+  { id: "quality-testing", n: "04", t: "Quality testing", d: "Every batch tested for nutrition, microbial load, and pellet stability — nothing ships without a passport." },
+  { id: "packaging", n: "05", t: "Packaging", d: "Moisture-barrier packaging engineered for tropical storage and long-distance logistics." },
+  { id: "distribution", n: "06", t: "Global distribution", d: "A cold-chain-ready network delivering across South Asia, South-East Asia, and the Middle East." },
 ];
 
 function Page() {
@@ -53,7 +53,7 @@ function Page() {
         <ol className="mx-auto max-w-4xl">
           {steps.map((s, i) => (
             <Reveal key={s.n} delay={i * 0.05}>
-              <li className="grid gap-6 border-t border-border py-12 md:grid-cols-[8rem_1fr]">
+              <li id={s.id} className="grid scroll-mt-28 gap-6 border-t border-border py-12 md:grid-cols-[8rem_1fr]">
                 <span className="font-display text-3xl text-secondary">{s.n}</span>
                 <div>
                   <h3 className="font-display text-4xl leading-tight">{s.t}</h3>

@@ -449,12 +449,12 @@ function WhyUs() {
 /* ---------- MANUFACTURING TIMELINE ---------- */
 function Manufacturing() {
   const steps = [
-    { n: "01", title: "Raw material selection", desc: "Marine proteins, cereals, and micro-ingredients vetted against strict source criteria." },
-    { n: "02", title: "Research", desc: "Formulations engineered by our nutritionists and validated in trial ponds." },
-    { n: "03", title: "Production", desc: "Continuous extrusion at our 66,000 MT facility with real-time process control." },
-    { n: "04", title: "Quality testing", desc: "Nutritional, microbial, and stability testing on every production batch." },
-    { n: "05", title: "Packaging", desc: "Moisture-barrier packaging engineered for tropical storage conditions." },
-    { n: "06", title: "Distribution", desc: "A cold-chain-ready logistics network serving farms across three continents." },
+    { id: "raw-material-selection", n: "01", title: "Raw material selection", desc: "Marine proteins, cereals, and micro-ingredients vetted against strict source criteria." },
+    { id: "research", n: "02", title: "Research", desc: "Formulations engineered by our nutritionists and validated in trial ponds." },
+    { id: "production", n: "03", title: "Production", desc: "Continuous extrusion at our 66,000 MT facility with real-time process control." },
+    { id: "quality-testing", n: "04", title: "Quality testing", desc: "Nutritional, microbial, and stability testing on every production batch." },
+    { id: "packaging", n: "05", title: "Packaging", desc: "Moisture-barrier packaging engineered for tropical storage conditions." },
+    { id: "distribution", n: "06", title: "Distribution", desc: "A cold-chain-ready logistics network serving farms across three continents." },
   ];
   return (
     <section className="relative overflow-hidden bg-background py-32 md:py-48">
@@ -495,8 +495,13 @@ function Manufacturing() {
           <ol className="md:col-span-6 md:col-start-7">
             {steps.map((s, i) => (
               <Reveal key={s.n} delay={i * 0.05}>
-                <li className="group relative border-b border-border py-10 first:pt-0">
-                  <div className="flex items-baseline gap-6">
+                <li className="border-b border-border first:pt-0">
+                  <Link
+                    to="/manufacturing"
+                    hash={s.id}
+                    id={s.id}
+                    className="group flex items-baseline gap-6 py-10"
+                  >
                     <span className="font-display text-2xl text-secondary">{s.n}</span>
                     <div className="flex-1">
                       <h3 className="font-display text-3xl tracking-tight text-foreground">
@@ -507,7 +512,7 @@ function Manufacturing() {
                       </p>
                     </div>
                     <ArrowUpRight className="size-5 shrink-0 text-muted-foreground/40 transition-all group-hover:text-secondary group-hover:-translate-y-1 group-hover:translate-x-1" />
-                  </div>
+                  </Link>
                 </li>
               </Reveal>
             ))}
@@ -718,14 +723,14 @@ function ContactCTA() {
               </Link>
               <a
                 href="mailto:sales@sandhyafeed.com"
-                className="group inline-flex items-center justify-between rounded-2xl bg-primary-foreground/[0.06] px-6 py-5 ring-1 ring-primary-foreground/10 transition-all hover:bg-primary-foreground/10"
+                className="group inline-flex items-center justify-between rounded-2xl bg-primary-foreground/[0.06] px-6 py-5 ring-1 ring-primary-foreground/10 transition-all hover:bg-accent hover:text-primary hover:ring-transparent"
               >
                 <span className="font-display text-2xl">sales@sandhyafeed.com</span>
                 <ArrowUpRight className="size-5" />
               </a>
               <Link
                 to="/products"
-                className="group inline-flex items-center justify-between rounded-2xl bg-primary-foreground/[0.06] px-6 py-5 ring-1 ring-primary-foreground/10 transition-all hover:bg-primary-foreground/10"
+                className="group inline-flex items-center justify-between rounded-2xl bg-primary-foreground/[0.06] px-6 py-5 ring-1 ring-primary-foreground/10 transition-all hover:bg-accent hover:text-primary hover:ring-transparent"
               >
                 <span className="font-display text-2xl">Browse the product range</span>
                 <ArrowUpRight className="size-5" />
