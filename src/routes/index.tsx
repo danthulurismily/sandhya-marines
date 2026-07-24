@@ -90,7 +90,7 @@ function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="inline-block rounded-full bg-accent px-4 py-1.5 text-xs uppercase tracking-[0.32em] text-primary"
+          className="inline-block self-start rounded-full bg-accent px-4 py-1.5 text-xs uppercase tracking-[0.32em] text-primary"
         >
           Sandhya Marines · Since 1993
         </motion.p>
