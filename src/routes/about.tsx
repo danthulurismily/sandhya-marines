@@ -37,6 +37,7 @@ function AboutPage() {
           </>
         }
         subtitle="Founded in 1993, Sandhya Marines has spent three decades turning marine science into feed farmers can trust. We are equal parts laboratory, factory, and field team."
+        video="/about.mp4"
       />
 
       <section className="container-editorial py-24">
@@ -150,11 +151,44 @@ export function PageHero({
   eyebrow,
   title,
   subtitle,
+  video,
 }: {
   eyebrow: string;
   title: React.ReactNode;
   subtitle: string;
+  video?: string;
 }) {
+  if (video) {
+    return (
+      <section className="relative isolate flex min-h-[80vh] w-full items-end overflow-hidden pb-16 pt-40 md:pb-24 md:pt-48">
+        <video
+          src={video}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-primary/50 via-primary/25 to-primary/85" />
+        <div className="container-editorial">
+          <Reveal>
+            <p className="text-xs uppercase tracking-[0.28em] text-accent">{eyebrow}</p>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <h1 className="mt-8 max-w-5xl font-display text-[clamp(2.5rem,6vw,6rem)] leading-[1.02] tracking-tight text-balance text-primary-foreground">
+              {title}
+            </h1>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-primary-foreground/85">
+              {subtitle}
+            </p>
+          </Reveal>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="container-editorial pb-16 pt-40 md:pb-24 md:pt-48">
       <Reveal>
