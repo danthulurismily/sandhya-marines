@@ -17,6 +17,8 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const [progress, setProgress] = useState(0);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const hasDarkHero = pathname === "/" || pathname === "/about";
+  const dark = scrolled || !hasDarkHero;
 
   useEffect(() => {
     const onScroll = () => {
@@ -51,14 +53,14 @@ export function Navbar() {
             <span className="flex flex-col leading-none">
               <span
                 className={`font-display text-lg tracking-tight transition-colors ${
-                  scrolled ? "text-foreground" : "text-white"
+                  dark ? "text-foreground" : "text-white"
                 }`}
               >
                 Sandhya Marines
               </span>
               <span
                 className={`text-[10px] uppercase tracking-[0.22em] transition-colors ${
-                  scrolled ? "text-foreground/70" : "text-white/70"
+                  dark ? "text-foreground/70" : "text-white/70"
                 }`}
               >
                 Marine Nutrition
@@ -74,7 +76,7 @@ export function Navbar() {
                   key={l.to}
                   to={l.to}
                   className={`relative text-sm tracking-wide transition-colors ${
-                    scrolled
+                    dark
                       ? active
                         ? "text-primary"
                         : "text-foreground/70 hover:text-primary"
@@ -88,7 +90,7 @@ export function Navbar() {
                     <motion.span
                       layoutId="nav-underline"
                       className={`absolute -bottom-1 left-0 h-px w-full ${
-                        scrolled ? "bg-primary" : "bg-white"
+                        dark ? "bg-primary" : "bg-white"
                       }`}
                     />
                   )}

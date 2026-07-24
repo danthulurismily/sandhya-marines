@@ -192,7 +192,7 @@ export function PageHero({
   return (
     <section className="container-editorial pb-16 pt-40 md:pb-24 md:pt-48">
       <Reveal>
-        <p className="text-xs uppercase tracking-[0.28em] text-secondary">{eyebrow}</p>
+        <p className="text-xs uppercase tracking-[0.28em] text-black">{eyebrow}</p>
       </Reveal>
       <Reveal delay={0.1}>
         <h1 className="mt-8 max-w-5xl font-display text-[clamp(2.5rem,6vw,6rem)] leading-[1.02] tracking-tight text-balance">
