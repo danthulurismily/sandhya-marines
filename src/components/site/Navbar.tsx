@@ -49,10 +49,10 @@ export function Navbar() {
               className="h-14 w-14 object-contain transition-transform group-hover:scale-[1.03]"
             />
             <span className="flex flex-col leading-none">
-              <span className="font-display text-lg tracking-tight text-primary">
+              <span className="font-display text-lg tracking-tight text-foreground">
                 Sandhya Marines
               </span>
-              <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+              <span className="text-[10px] uppercase tracking-[0.22em] text-foreground/70">
                 Marine Nutrition
               </span>
             </span>
