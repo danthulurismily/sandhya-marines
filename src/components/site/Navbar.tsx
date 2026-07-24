@@ -49,10 +49,18 @@ export function Navbar() {
               className="h-18 w-18 object-contain transition-transform group-hover:scale-[1.03]"
             />
             <span className="flex flex-col leading-none">
-              <span className="font-display text-lg tracking-tight text-foreground">
+              <span
+                className={`font-display text-lg tracking-tight transition-colors ${
+                  scrolled ? "text-foreground" : "text-white"
+                }`}
+              >
                 Sandhya Marines
               </span>
-              <span className="text-[10px] uppercase tracking-[0.22em] text-foreground/70">
+              <span
+                className={`text-[10px] uppercase tracking-[0.22em] transition-colors ${
+                  scrolled ? "text-foreground/70" : "text-white/70"
+                }`}
+              >
                 Marine Nutrition
               </span>
             </span>
@@ -66,14 +74,22 @@ export function Navbar() {
                   key={l.to}
                   to={l.to}
                   className={`relative text-sm tracking-wide transition-colors ${
-                    active ? "text-primary" : "text-foreground/70 hover:text-primary"
+                    scrolled
+                      ? active
+                        ? "text-primary"
+                        : "text-foreground/70 hover:text-primary"
+                      : active
+                        ? "text-white"
+                        : "text-white/70 hover:text-white"
                   }`}
                 >
                   {l.label}
                   {active && (
                     <motion.span
                       layoutId="nav-underline"
-                      className="absolute -bottom-1 left-0 h-px w-full bg-primary"
+                      className={`absolute -bottom-1 left-0 h-px w-full ${
+                        scrolled ? "bg-primary" : "bg-white"
+                      }`}
                     />
                   )}
                 </Link>
