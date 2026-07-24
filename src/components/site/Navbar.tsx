@@ -46,7 +46,7 @@ export function Navbar() {
             <img
               src="/sandhya-logo.webp"
               alt="Sandhya Marines"
-              className="h-10 w-10 object-contain transition-transform group-hover:scale-[1.03]"
+              className="h-14 w-14 object-contain transition-transform group-hover:scale-[1.03]"
             />
             <span className="flex flex-col leading-none">
               <span className="font-display text-lg tracking-tight text-primary">
