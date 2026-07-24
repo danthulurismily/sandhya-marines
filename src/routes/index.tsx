@@ -70,11 +70,13 @@ function Hero() {
   return (
     <section ref={ref} className="relative h-[100dvh] min-h-[720px] w-full overflow-hidden">
       <motion.div style={{ y, scale }} className="absolute inset-0">
-        <img
-          src={hero}
-          alt="Aerial view of shrimp aquaculture ponds at golden hour"
-          width={1920}
-          height={1280}
+        <video
+          src="/hero.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={hero}
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/20 to-primary/80" />
