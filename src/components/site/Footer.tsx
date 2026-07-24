@@ -39,7 +39,7 @@ export function Footer() {
               <img
                 src="/sandhya-logo.webp"
                 alt="Sandhya Marines"
-                className="h-17 w-17 md object-contain "
+                className="h-17 w-17 object-contain "
               />
               <span className="font-display text-xl">Sandhya Marines</span>
             </div>
