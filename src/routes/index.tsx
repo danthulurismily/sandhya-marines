@@ -290,30 +290,35 @@ function Counter({ to }: { to: number }) {
 /* ---------- PRODUCTS ---------- */
 const products = [
   {
+    id: "vannamei",
     name: "Vannamei Feed",
     tagline: "For Pacific white shrimp",
     desc: "High-density nutrition engineered for L. vannamei — accelerating growth while preserving pond health.",
     img: pellets,
   },
   {
+    id: "monodon",
     name: "Monodon Feed",
     tagline: "For Black Tiger shrimp",
     desc: "Formulated for P. monodon to deliver superior size uniformity and resilience across grow-out cycles.",
     img: shrimp,
   },
   {
+    id: "starter",
     name: "Starter Feed",
     tagline: "Early-stage nutrition",
     desc: "Micro-pellets rich in immunity boosters for post-larvae and early juvenile stages.",
     img: lab,
   },
   {
+    id: "grower",
     name: "Grower Feed",
     tagline: "Mid-cycle performance",
     desc: "Balanced protein and lipid profile to sustain rapid growth through the intermediate stage.",
     img: manufacturing,
   },
   {
+    id: "finisher",
     name: "Finisher Feed",
     tagline: "Pre-harvest conditioning",
     desc: "Peak-density formulation for maximum weight gain and premium harvest quality.",
@@ -369,6 +374,8 @@ function ProductCard({
   return (
     <Link
       to="/products"
+      hash={product.id}
+      id={product.id}
       className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-primary-foreground/[0.04] ring-1 ring-primary-foreground/10 transition-all hover:ring-accent/60"
     >
       <div className="relative aspect-[4/3] overflow-hidden">
@@ -710,10 +717,10 @@ function ContactCTA() {
                 <ArrowUpRight className="size-5" />
               </Link>
               <a
-                href="mailto:hello@sandhyamarines.com"
+                href="mailto:sales@sandhyafeed.com"
                 className="group inline-flex items-center justify-between rounded-2xl bg-primary-foreground/[0.06] px-6 py-5 ring-1 ring-primary-foreground/10 transition-all hover:bg-primary-foreground/10"
               >
-                <span className="font-display text-2xl">hello@sandhyamarines.com</span>
+                <span className="font-display text-2xl">sales@sandhyafeed.com</span>
                 <ArrowUpRight className="size-5" />
               </a>
               <Link

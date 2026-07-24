@@ -31,6 +31,7 @@ export const Route = createFileRoute("/products")({
 
 const catalog = [
   {
+    id: "vannamei",
     name: "Vannamei Feed",
     tag: "L. vannamei · All stages",
     desc: "High-density nutrition engineered for the Pacific white shrimp — accelerating growth while preserving pond health across the cycle.",
@@ -38,6 +39,7 @@ const catalog = [
     facts: ["38–42% crude protein", "Extruded floating & sinking", "Immunity-forward formulation"],
   },
   {
+    id: "monodon",
     name: "Monodon Feed",
     tag: "P. monodon · Grow-out",
     desc: "Formulated for the Black Tiger to deliver superior size uniformity, colour, and resilience across the grow-out phase.",
@@ -45,6 +47,7 @@ const catalog = [
     facts: ["High marine protein", "Astaxanthin-enhanced", "Superior FCR"],
   },
   {
+    id: "starter",
     name: "Starter Feed",
     tag: "Post-larvae · Nursery",
     desc: "Micro-pellets rich in immunity boosters, digestive enzymes, and essential lipids for post-larvae and early juvenile stages.",
@@ -52,6 +55,7 @@ const catalog = [
     facts: ["Crumble & micro-pellet", "Pre-biotic enriched", "Water-stable"],
   },
   {
+    id: "grower",
     name: "Grower Feed",
     tag: "Mid-cycle",
     desc: "A balanced protein-to-lipid profile to sustain rapid growth through the intermediate stage without compromising water quality.",
@@ -59,6 +63,7 @@ const catalog = [
     facts: ["Optimised energy density", "Reduced ammonia excretion", "Batch-verified"],
   },
   {
+    id: "finisher",
     name: "Finisher Feed",
     tag: "Pre-harvest",
     desc: "Peak-density formulation for maximum weight gain, muscle quality, and premium harvest condition.",
@@ -85,7 +90,8 @@ function ProductsPage() {
           {catalog.map((p, i) => (
             <Reveal key={p.name}>
               <article
-                className={`grid gap-10 md:grid-cols-12 md:items-center ${
+                id={p.id}
+                className={`grid scroll-mt-28 gap-10 md:grid-cols-12 md:items-center ${
                   i % 2 === 1 ? "md:[&>div:first-child]:col-start-7" : ""
                 }`}
               >

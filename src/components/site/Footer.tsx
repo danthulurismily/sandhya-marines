@@ -25,10 +25,10 @@ export function Footer() {
               Start a conversation →
             </Link>
             <a
-              href="mailto:hello@sandhyamarines.com"
+              href="mailto:sales@sandhyafeed.com"
               className="text-sm text-primary-foreground/70 underline-offset-4 hover:underline"
             >
-              hello@sandhyamarines.com
+              sales@sandhyafeed.com
             </a>
           </div>
         </Reveal>
@@ -76,8 +76,8 @@ export function Footer() {
             </p>
             <ul className="mt-5 space-y-3 text-sm text-primary-foreground/80">
               <li>Andhra Pradesh, India</li>
-              <li>+91 000 000 0000</li>
-              <li>hello@sandhyamarines.com</li>
+              <li>+91 89127 84599</li>
+              <li>sales@sandhyafeed.com</li>
             </ul>
           </div>
         </div>

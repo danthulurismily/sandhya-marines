@@ -42,9 +42,13 @@ function Page() {
         <div className="grid gap-16 md:grid-cols-12">
           <div className="md:col-span-5 space-y-10">
             {[
-              { icon: MapPin, t: "Head office", d: "Sandhya Marines Ltd.\nAndhra Pradesh, India" },
-              { icon: Mail, t: "Email", d: "hello@sandhyamarines.com\nsales@sandhyamarines.com" },
-              { icon: Phone, t: "Phone", d: "+91 000 000 0000\nMon–Sat · 9:00 – 18:00 IST" },
+              {
+                icon: MapPin,
+                t: "Corporate / Branch Office",
+                d: "Pandurangapuram\nPlot No. 62 & 67, Pandurangapuram,\nVisakhapatnam, Andhra Pradesh 530003",
+              },
+              { icon: Mail, t: "Email", d: "sales@sandhyafeed.com" },
+              { icon: Phone, t: "Phone", d: "+91 89127 84599\nMon–Sat · 9:00 – 18:00 IST" },
             ].map(({ icon: Icon, t, d }) => (
               <Reveal key={t}>
                 <div className="flex gap-5">
@@ -104,12 +108,15 @@ function Page() {
           <div className="overflow-hidden rounded-3xl border border-border">
             <iframe
               title="Sandhya Marines location"
-              src="https://www.google.com/maps?q=Andhra+Pradesh+India&output=embed"
+              src="https://www.google.com/maps?q=17.716531,83.322307&output=embed"
               className="h-[420px] w-full grayscale"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
+          <p className="mt-4 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+            Latitude: 17.716531&deg; N &nbsp;·&nbsp; Longitude: 83.322307&deg; E
+          </p>
         </Reveal>
       </section>
     </SiteLayout>
