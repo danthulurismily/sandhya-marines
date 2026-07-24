@@ -43,9 +43,11 @@ export function Navbar() {
       >
         <div className="container-editorial flex h-20 items-center justify-between">
           <Link to="/" className="group flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center rounded-full gradient-ocean text-primary-foreground shadow-lg shadow-primary/20">
-              <span className="font-display text-lg leading-none">S</span>
-            </span>
+            <img
+              src="/sandhya-logo.webp"
+              alt="Sandhya Marines"
+              className="h-10 w-10 object-contain transition-transform group-hover:scale-[1.03]"
+            />
             <span className="flex flex-col leading-none">
               <span className="font-display text-lg tracking-tight text-primary">
                 Sandhya Marines
