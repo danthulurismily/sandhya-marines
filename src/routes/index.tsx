@@ -90,7 +90,7 @@ function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-xs uppercase tracking-[0.32em] text-accent"
+          className="inline-block rounded-full bg-accent px-4 py-1.5 text-xs uppercase tracking-[0.32em] text-primary"
         >
           Sandhya Marines · Since 1993
         </motion.p>
@@ -205,7 +205,7 @@ function About() {
         <div className="md:col-span-5">
           <Reveal>
             <p className="text-xs uppercase tracking-[0.28em] text-secondary">
-              01 — Our story
+              Our story
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -329,7 +329,7 @@ function Products() {
           <div className="md:col-span-5">
             <Reveal>
               <p className="text-xs uppercase tracking-[0.28em] text-accent">
-                02 — Product range
+                Product range
               </p>
             </Reveal>
             <Reveal delay={0.1}>
@@ -350,9 +350,9 @@ function Products() {
         </div>
 
         <Stagger className="mt-20 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {products.map((p, i) => (
+          {products.map((p) => (
             <Item key={p.name}>
-              <ProductCard product={p} featured={i === 0} />
+              <ProductCard product={p} />
             </Item>
           ))}
         </Stagger>
@@ -363,19 +363,15 @@ function Products() {
 
 function ProductCard({
   product,
-  featured,
 }: {
   product: (typeof products)[number];
-  featured?: boolean;
 }) {
   return (
     <Link
       to="/products"
-      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl bg-primary-foreground/[0.04] ring-1 ring-primary-foreground/10 transition-all hover:ring-accent/60 ${
-        featured ? "lg:row-span-2" : ""
-      }`}
+      className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-primary-foreground/[0.04] ring-1 ring-primary-foreground/10 transition-all hover:ring-accent/60"
     >
-      <div className={`relative overflow-hidden ${featured ? "aspect-[4/5]" : "aspect-[4/3]"}`}>
+      <div className="relative aspect-[4/3] overflow-hidden">
         <img
           src={product.img}
           alt={product.name}
@@ -415,7 +411,7 @@ function WhyUs() {
       <div className="max-w-3xl">
         <Reveal>
           <p className="text-xs uppercase tracking-[0.28em] text-secondary">
-            03 — Why choose us
+            Why choose us
           </p>
         </Reveal>
         <Reveal delay={0.1}>
@@ -460,7 +456,7 @@ function Manufacturing() {
           <div className="md:col-span-5 md:sticky md:top-32 md:self-start">
             <Reveal>
               <p className="text-xs uppercase tracking-[0.28em] text-secondary">
-                04 — Manufacturing
+              Manufacturing
               </p>
             </Reveal>
             <Reveal delay={0.1}>
@@ -559,7 +555,7 @@ function Sustainability() {
       <div className="container-editorial relative py-40 md:py-56">
         <Reveal>
           <p className="text-xs uppercase tracking-[0.28em] text-accent">
-            05 — Sustainability
+            Sustainability
           </p>
         </Reveal>
         <Reveal delay={0.1}>
@@ -618,7 +614,7 @@ function Testimonials() {
     <section className="container-editorial py-32 md:py-48">
       <Reveal>
         <p className="text-xs uppercase tracking-[0.28em] text-secondary">
-          06 — Voices from the field
+          Voices from the field
         </p>
       </Reveal>
 
@@ -693,7 +689,7 @@ function ContactCTA() {
         <div className="relative grid gap-12 p-10 md:grid-cols-2 md:p-20">
           <Reveal>
             <p className="text-xs uppercase tracking-[0.28em] text-accent">
-              07 — Get in touch
+              Get in touch
             </p>
             <h2 className="mt-6 font-display text-5xl leading-[1.05] tracking-tight md:text-6xl">
               Let&rsquo;s grow <em className="text-accent">together</em>.
