@@ -71,7 +71,7 @@ function Hero() {
     <section ref={ref} className="relative h-[100dvh] min-h-[720px] w-full overflow-hidden">
       <motion.div style={{ y, scale }} className="absolute inset-0">
         <video
-          src="/hero.mp4"
+          src="/heropage.mp4"
           autoPlay
           loop
           muted
